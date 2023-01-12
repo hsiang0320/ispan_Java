@@ -1,0 +1,28 @@
+package hw3;
+
+import javax.imageio.ImageTranscoder;
+
+public class Sales {
+
+	public static void main(String[] args) {
+		String[] employee = { "Jean", "Tom", "Tina" };
+		int[][] productSales = { { 33, 32, 56, 45, 33 }, { 77, 33, 68, 45, 23 }, { 43, 55, 43, 67, 65 } };
+		int[] productPrice = { 12, 16, 10, 14, 15 };
+		int[] e_sales = new int[3];
+		int sales_MVP = 0;
+		for (int i = 0; i < productSales.length; i++) {//銷售額
+			for (int j = 0; j < productSales[i].length; j++) {
+				e_sales[i] = e_sales[i] + productPrice[j] * productSales[i][j];
+			}
+			System.out.println(employee[i] + "的銷售總額為:" + e_sales[i]);
+		}
+		for (int i = 1; i < e_sales.length; i++) {//銷售冠軍
+			if (e_sales[i] > e_sales[sales_MVP]) {
+				sales_MVP = i;
+			}
+		}
+		System.out.println(employee[sales_MVP] + "為銷售冠軍");
+
+	}
+
+}

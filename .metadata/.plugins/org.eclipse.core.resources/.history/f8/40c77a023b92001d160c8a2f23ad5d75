@@ -16,7 +16,6 @@ public class Scanner1 {
         System.out.println("您輸入第一個數字為：" + num1 );
         System.out.println("您輸入第二個數字為：" + num2 );
         System.out.println("您輸入第三個數字為：" + num3 );
-        scanner.close();
 	}
 
 }
