@@ -1,0 +1,17 @@
+package hw2;
+
+public class Interest {
+
+	public static void main(String[] args) {
+		int money1=100000;
+		int money2=100000;
+		int year=0;
+		while(money2<=money1) {
+			money2=(int) (money2*1.05);
+			money1=(int) (money1+(money1*0.1));
+			year++;
+		}
+		System.out.print("需要多少年:"+year);
+	}
+
+}

@@ -1,0 +1,13 @@
+package hw1;
+
+public class Season {
+
+	public static void main(String[] args) {
+		int month=1;
+		switch (month) {
+		case 1: System.out.print("春天");
+		}
+
+	}
+
+}

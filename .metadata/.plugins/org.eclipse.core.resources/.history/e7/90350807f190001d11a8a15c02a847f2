@@ -1,0 +1,12 @@
+package hw1;
+
+public class LeapYear {
+
+	public static void main(String[] args) {
+		int inputYear=2022;
+		if(inputYear % 4 !=0) {
+			System.out.println(inputYear+" 不是閏年");
+		}
+	}
+
+}

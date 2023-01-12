@@ -1,0 +1,13 @@
+package hw2;
+
+public class Rope {
+
+	public static void main(String[] args) {
+		int length=3000;
+		while(length>=5) {
+			length/=2;
+		}
+
+	}
+
+}

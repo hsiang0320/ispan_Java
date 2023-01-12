@@ -1,0 +1,17 @@
+package hw2;
+
+public class Rabbit {
+
+	public static void main(String[] args) {
+		int rabbit=0;
+		int num=1;
+		while(rabbit==0) {
+			if(num % 3==1 && num %5==1 && num %7==2) {
+				rabbit=num;
+			}
+			num++;
+		}
+		System.out.print("兔子最少有"+num+"隻");
+	}
+
+}

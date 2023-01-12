@@ -1,0 +1,14 @@
+package hw1;
+
+public class Refund {
+
+	public static void main(String[] args) {
+		int payableAmount=1000;
+		int paidAmount=1000;
+		if(payableAmount==paidAmount) {
+			System.out.println("不必找錢");
+		}
+		
+	}
+
+}

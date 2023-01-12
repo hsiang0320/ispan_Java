@@ -1,0 +1,21 @@
+package hw2;
+
+public class Amstrong {
+
+	public static void main(String[] args) {	
+		System.out.print("Amstrong數有:");
+		for (int i = 1; i <= 999; i++) {
+			int h,t,d=0;
+			h=i/100;
+			i-=h*100;
+			t=i/10;
+			i-=t*10;
+			d=i/1;
+			i-=d*1;
+			if(Math.pow(h,3) + Math.pow(t,3) + Math.pow(d,3) ==i) {
+				System.out.print(i+" ");
+			}
+		}
+	}
+
+}

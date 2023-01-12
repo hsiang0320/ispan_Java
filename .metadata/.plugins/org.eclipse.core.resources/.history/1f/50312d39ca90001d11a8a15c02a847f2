@@ -1,0 +1,25 @@
+package hw1;
+
+public class Season {
+
+	public static void main(String[] args) {
+		int month=0;
+		switch (month) {
+		case (1): System.out.print("冬天");
+		case (2): System.out.print("冬天");
+		case (3): System.out.print("春天");
+		case (4): System.out.print("春天");
+		case (5): System.out.print("春天");
+		case (6): System.out.print("夏天");
+		case (7): System.out.print("夏天");
+		case (8): System.out.print("夏天");
+		case (9): System.out.print("秋天");
+		case (10): System.out.print("秋天");
+		case (11): System.out.print("秋天");
+		case (12): System.out.print("冬天");
+		default : System.out.print("Error");
+		}
+
+	}
+
+}

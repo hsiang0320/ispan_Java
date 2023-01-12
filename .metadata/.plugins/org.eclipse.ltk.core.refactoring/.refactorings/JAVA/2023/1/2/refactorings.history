@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TwoDimArray.java&apos; to &apos;JAVA/src/com.lcpan.m04&apos;&#x0D;&#x0A;- Original project: &apos;JAVA&apos;&#x0D;&#x0A;- Destination element: &apos;JAVA/src/com.lcpan.m04&apos;&#x0D;&#x0A;- Original element: &apos;com.lcpan.m04.TwoDimArray.java&apos;" description="Copy compilation unit" destination="/src&lt;com.lcpan.m04" element1="/src&lt;com.lcpan.m04{TwoDimArray.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1673485998080" units="1" version="1.0"/>
+</session>
