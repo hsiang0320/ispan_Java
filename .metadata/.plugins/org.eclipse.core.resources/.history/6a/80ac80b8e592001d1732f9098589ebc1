@@ -1,0 +1,60 @@
+package hw3;
+
+import java.util.Scanner;
+
+public class Rain {
+
+	public static void main(String[] args) {// 5*4*3
+		int year, season, month;
+		double ans = 0;
+		double[][][] rainRec = {
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } },
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } },
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } },
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } },
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } } };
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("請輸入all、year、season、month\n");
+		String selectType = scanner.next();
+		if (!selectType.equals("all") && !selectType.equals("year") && !selectType.equals("season")
+				&& !selectType.equals("month")) {// 輸入錯誤判斷
+			System.out.print("error");
+			System.exit(0);
+		} else if (selectType.equals("all")) {// all篩選
+			for (int i = 0; i < rainRec.length; i++) {// 這裡做all
+				for (int j = 0; j < rainRec[i].length; j++) {
+					for (int z = 0; z < rainRec[i][j].length; z++) {
+						ans += rainRec[i][j][z];
+					}
+				}
+
+			}
+			System.out.print(ans);
+		} else {
+			System.out.print("輸入一個正整數指定年/季/月\n");
+			if (selectType.equals("year")) {
+				year = scanner.nextInt();
+				if (year > 5 || year < 1) {
+					System.out.print("年 輸入錯誤");
+				}else {
+					for(int i = 0; i<rainRec[year].length;i++) {
+						for(int j=0;j<rainRec[year][i].length;j++) {
+							ans+=rainRec[year][i][j];
+						}
+					}
+				}
+			} else if (selectType.equals("season")) {
+				season = scanner.nextInt();
+				if (season > 4 || season < 1) {
+					System.out.print("季 輸入錯誤");
+				}
+			} else if (selectType.equals("month")) {
+				month = scanner.nextInt();
+				if(month>12||month<1) {
+					System.out.print("月 輸入錯誤");
+			}
+
+		}
+	}
+
+}

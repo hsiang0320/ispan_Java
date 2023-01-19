@@ -1,0 +1,28 @@
+package hw4;
+
+import java.util.Scanner;
+
+public class CheckID {
+	static boolean isID(String id) {
+		if(id.length()!=10) {
+		return false;
+		}
+		if(!((id.charAt(0)>=65 && id.charAt(0)<=90) || (id.charAt(0)>=97 && id.charAt(0)<=122)) ) {
+			return false;
+		}
+		if(id.charAt(1)!=1 || id.charAt(1)!=2) {
+			return false;
+		}
+		return true;	
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		String id= new String();
+		System.out.println("請輸入身分證字號");
+		id=scanner.next();
+		//System.out.println(id.charAt(0)>=66);
+		System.out.print(isID(id));
+	}
+
+}

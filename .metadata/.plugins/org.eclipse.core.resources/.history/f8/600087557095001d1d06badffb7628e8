@@ -1,0 +1,26 @@
+package com.lcpan.m05;
+
+public class Account {
+	String accountNo = new String();
+	double balance;
+
+	public Account() {
+
+	}
+
+	public Account(String accountNo, double balance) {
+		this.accountNo = accountNo;
+		this.balance = balance;
+	}
+
+	public void printAccData() {
+		System.out.print("帳號:"+accountNo);
+		System.out.print("餘額:"+balance);
+	}
+
+	public static void main(String[] args) {
+		Account acc = new Account("124654", 50000.0);
+		acc.printAccData();
+	}
+
+}

@@ -2,13 +2,16 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.annotation.processing.RoundEnvironment"/>
     <fullyQualifiedTypeName name="java.lang.Module"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.io.InterruptedIOException"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="com.lcpan.m04.Factor"/>
     <fullyQualifiedTypeName name="java.text.spi.NumberFormatProvider"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageTranscoder"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.BoldAction"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="hw4.CheckID"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.io.InterruptedIOException"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

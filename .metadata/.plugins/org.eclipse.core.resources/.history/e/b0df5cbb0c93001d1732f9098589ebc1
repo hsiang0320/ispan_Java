@@ -1,0 +1,33 @@
+package hw4;
+
+public class Verifier {
+	static void f1() {
+		for (int i = 0; i < 4; i++) {
+			System.out.print((int) (Math.random() * 10));
+		}
+		System.out.println();
+	}
+
+	static void f2() {
+		int[] check = new int[4];
+
+		for (int i = 0; i < 4; i++) {
+			check[i] = (int) (Math.random() * 10);
+			System.out.print(check[i]);
+		}
+		for (int i = 3; i > 0; i--) {
+			for (int j = 0; j < i; j++) {
+				if (check[i] == check[j]) {
+					System.out.print("有數字重複");
+				}
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		f1();// 第一題
+		f2();
+	}
+
+}

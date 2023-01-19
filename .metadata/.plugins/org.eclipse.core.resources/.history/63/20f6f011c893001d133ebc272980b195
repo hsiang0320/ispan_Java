@@ -1,0 +1,41 @@
+package hw4;
+
+public class Poker {
+
+	static void deal() {
+		int[][] check = new int[4][13];
+		int[][] player_cards = new int[4][13];
+		int poker_suits = 0;
+		int poker_num = 0;
+		// int[][] deal_poker = new int[4][13];
+		for (int i = 0; i < check.length; i++) {
+			for (int j = 0; j < check[i].length; j++) {
+				check[i][j] = 0;
+			}
+		}
+
+		//System.out.print("花色:" + poker_suits + " 點數:" + poker_num);
+		for (int i = 0; i < player_cards.length; i++) {
+			for (int j = 0; j < player_cards[i].length; j++) {
+				do {
+					poker_suits = (int) (Math.random() * 4);
+					poker_num = (int) (Math.random() * 13);
+				} while (check[poker_suits][poker_num] == 1);
+				check[poker_suits][poker_num] = 1;
+			}
+		}
+		/*for (int i = 0; i < check.length; i++) {   
+			for (int j = 0; j < check[i].length; j++) {
+				System.out.print(check[i][j]+" ");
+			}
+			System.out.println();
+		}*/
+	}
+
+	
+
+	public static void main(String[] args) {
+		deal();
+	}
+
+}

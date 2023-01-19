@@ -1,8 +1,8 @@
 package com.lcpan.m05;
 
 public class Employee {
-	int empno; // ­û¤u¥N¸¹
-	String name; // ­û¤u©m¦W
+	int empno; // å“¡å·¥ä»£è™Ÿ
+	String name; // å“¡å·¥å§“å
 
 	public void printData() {
 		System.out.print("Empno = " + empno);

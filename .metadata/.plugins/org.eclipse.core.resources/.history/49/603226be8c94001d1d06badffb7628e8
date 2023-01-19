@@ -1,0 +1,113 @@
+package hw4;
+
+import java.util.Scanner;
+
+public class IDGenerator {
+	static char regionCheck(String region) {
+		char regionCode = 0;
+		switch (region) {
+		case "台北市":
+			regionCode = 'A';
+			break;
+		case "台中市":
+			regionCode = 'B';
+			break;
+		case "基隆市":
+			regionCode = 'C';
+			break;
+		case "台南市":
+			regionCode = 'D';
+			break;
+		case "高雄市":
+			regionCode = 'E';
+			break;
+		case "新北市":
+			regionCode = 'F';
+			break;
+		case "宜蘭縣":
+			regionCode = 'G';
+			break;
+		case "桃園市":
+			regionCode = 'H';
+			break;
+		case "嘉義市":
+			regionCode = 'I';
+			break;
+		case "新竹縣":
+			regionCode = 'J';
+			break;
+		case "苗栗縣":
+			regionCode = 'K';
+			break;
+		case "南投縣":
+			regionCode = 'M';
+			break;
+		case "彰化縣":
+			regionCode = 'N';
+			break;
+		case "新竹市":
+			regionCode = 'O';
+			break;
+		case "雲林縣":
+			regionCode = 'P';
+			break;
+		case "嘉義縣":
+			regionCode = 'Y';
+			break;
+		case "屏東縣":
+			regionCode = 'T';
+			break;
+		case "花蓮縣":
+			regionCode = 'O';
+			break;
+		case "台東縣":
+			regionCode = 'P';
+			break;
+		case "金門縣":
+			regionCode = 'O';
+			break;
+		case "澎湖縣":
+			regionCode = 'P';
+			break;
+		case "連江縣":
+			regionCode = 'P';
+			break;
+		case "台中縣":
+			regionCode = 'O';
+			break;
+		case "台南縣":
+			regionCode = 'P';
+			break;
+		case "高雄縣":
+			regionCode = 'P';
+			break;
+		case "陽明山管理局":
+			regionCode = 'P';
+			break;
+
+
+		default:
+			System.out.print("無此縣市");
+			break;
+		}
+		return regionCode;
+	}
+
+	static void randomID(String region, String sex) {
+
+	}
+
+	public static void main(String[] args) {
+		String region = new String();
+		String sex = new String();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("請輸入地區");
+		region = scanner.next();
+		System.out.println("請輸入性別");
+		sex = scanner.next();
+		randomID(region, sex);
+		scanner.close();
+
+	}
+
+}

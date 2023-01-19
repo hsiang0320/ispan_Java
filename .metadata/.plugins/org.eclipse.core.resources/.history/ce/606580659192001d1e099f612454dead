@@ -1,0 +1,23 @@
+package hw3;
+
+import java.util.Scanner;
+
+public class Rain {
+
+	public static void main(String[] args) {// 5*12*12
+		double[][][] rainRec = {
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } },
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } },
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } },
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } },
+				{ { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 }, { 60.5, 50.2, 89.2 } } };
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("請輸入all、year、season、month");
+		String selectType = scanner.next();
+		if (!selectType.equals("all") || !selectType.equals("year") || !selectType.equals("season")
+				|| !selectType.equals("month")) {
+			System.out.print("error");
+		}
+	}
+
+}
