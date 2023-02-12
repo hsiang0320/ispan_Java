@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/JAVA/lib/sqljdbc_11.2.3.0_cht/sqljdbc_11.2cht/mssql-jdbc-11.2.3.jre17.jar"/>
+	<classpathentry kind="lib" path="E:/Java/sqljdbc_11.2/cht/mssql-jdbc-11.2.3.jre17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

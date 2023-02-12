@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
-	String url = "jdbc:sqlserver://localhost:1433;databasename=midtermDB;encrypt=false";
+	String url = "jdbc:sqlserver://localhost:1433;databasename=MidtermDB;encrypt=false";
 	String acc = "huang";
 	String pwd = "1234";
 

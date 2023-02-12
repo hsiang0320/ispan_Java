@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="hw_EmployeeFile.FullTimeEmployees"/>
     <fullyQualifiedTypeName name="hw_EmployeeFile.GeneralEmployee"/>
     <fullyQualifiedTypeName name="hw_EmployeeFile.TemporaryEmployees"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="data.UrlData"/>
+    <fullyQualifiedTypeName name="java.time.Month"/>
 </qualifiedTypeNameHistroy>

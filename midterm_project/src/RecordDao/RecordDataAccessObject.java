@@ -19,7 +19,7 @@ import connUtil.ConnectionFactory;
 public class RecordDataAccessObject implements RecordDAO {
 	@Override
 	public boolean createMRTRecoed(MRTRecord record) {
-		String sql = "insert into Table1 (Date,Day_Of_Week,Total_Volume) values(?,?,?)";
+		String sql = "insert into Table1 (Date,Day_Of_Week,Total_Capacity) values(?,?,?)";
 		ConnectionFactory connFactory = new ConnectionFactory();
 		try (Connection conn = connFactory.getConnection()) {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -28,27 +28,25 @@ public class RecordDataAccessObject implements RecordDAO {
 			Date sqlDate = new Date(record.getDate().getTimeInMillis());
 			pstmt.setDate(1, sqlDate);
 			pstmt.setString(2, record.getDayOfWeek());
-			pstmt.setInt(3, record.getTotalVolume());
+			pstmt.setInt(3, record.getTotalCapacity());
 			int updateCount = pstmt.executeUpdate();
+			System.out.println("新增了" + updateCount + "筆資料");
 			if (updateCount < 1) {
 				return false;
-			} else {
-				System.out.println("新增了" + updateCount + "筆資料");
+			} else {			
 				return true;
 			}
-
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return false;
 	}
 
 	@Override
 	public boolean createMRTRecoed(ArrayList<MRTRecord> records) {
 		int updateCount = 0;
-		String sql = "insert into Table1 (Date,Day_Of_Week,Total_Volume) values(?,?,?)";
+		String sql = "insert into Table1 (Date,Day_Of_Week,Total_Capacity) values(?,?,?)";
 		ConnectionFactory connFactory = new ConnectionFactory();
 		try (Connection conn = connFactory.getConnection()) {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -56,7 +54,7 @@ public class RecordDataAccessObject implements RecordDAO {
 				Date sqlDate = new Date(record.getDate().getTimeInMillis());
 				pstmt.setDate(1, sqlDate);
 				pstmt.setString(2, record.getDayOfWeek());
-				pstmt.setInt(3, record.getTotalVolume());
+				pstmt.setInt(3, record.getTotalCapacity());
 				updateCount += pstmt.executeUpdate();
 			}
 			System.out.println("新增了" + updateCount + "筆資料");
@@ -65,7 +63,6 @@ public class RecordDataAccessObject implements RecordDAO {
 			} else {
 				return true;
 			}
-
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return false;
@@ -75,7 +72,7 @@ public class RecordDataAccessObject implements RecordDAO {
 
 	@Override
 	public MRTRecord findRecordByDate(Calendar date) {
-		String sql = "select Date,Day_Of_Week,Total_Volume from Table1 where Date=?";
+		String sql = "select Date,Day_Of_Week,Total_Capacity from Table1 where Date=?";
 		ConnectionFactory connFactory = new ConnectionFactory();
 		try (Connection conn = connFactory.getConnection()) {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -88,7 +85,7 @@ public class RecordDataAccessObject implements RecordDAO {
 			cal.setTime(rs.getDate(1));
 			record.setDate(cal);
 			record.setDayOfWeek(rs.getString(2));
-			record.setTotalVolume(Integer.parseInt(rs.getString(3)));
+			record.setTotalCapacity(Integer.parseInt(rs.getString(3)));
 			return record;
 
 		} catch (SQLException e) {
@@ -113,7 +110,7 @@ public class RecordDataAccessObject implements RecordDAO {
 				cal.setTime(rs.getDate(1));
 				record.setDate(cal);
 				record.setDayOfWeek(rs.getString(2));
-				record.setTotalVolume(Integer.parseInt(rs.getString(3)));
+				record.setTotalCapacity(Integer.parseInt(rs.getString(3)));
 				recList.add(record);
 			}
 
@@ -129,14 +126,14 @@ public class RecordDataAccessObject implements RecordDAO {
 	@Override
 	public boolean updateRecord(MRTRecord record) {
 		int updateCount = 0;
-		String sql = "update Table1 set Date=?, Day_Of_Week=?, Total_Volume=? where Date=?";
+		String sql = "update Table1 set Date=?, Day_Of_Week=?, Total_Capacity=? where Date=?";
 		ConnectionFactory connFactory = new ConnectionFactory();
 		try (Connection conn = connFactory.getConnection()) {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			Date sqlDate = new Date(record.getDate().getTimeInMillis());
 			pstmt.setDate(1, sqlDate);
 			pstmt.setString(2, record.getDayOfWeek());
-			pstmt.setInt(3, record.getTotalVolume());
+			pstmt.setInt(3, record.getTotalCapacity());
 			pstmt.setDate(4, sqlDate);
 			updateCount += pstmt.executeUpdate();
 			System.out.println("修改了" + updateCount + "筆資料");
@@ -179,13 +176,14 @@ public class RecordDataAccessObject implements RecordDAO {
 	public boolean writeToCsv() {
 		ArrayList<MRTRecord> Records = findAllRecords();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-		try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data.csv"))) {
+		try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("output.csv"))) {
 			for (MRTRecord record : Records) {
 				Date date = new Date(record.getDate().getTimeInMillis());
 				bufferedWriter.write(sdf.format(date) + "," + record.getDayOfWeek() + "," 
-				+ record.getTotalVolume());
+				+ record.getTotalCapacity());
 				bufferedWriter.newLine();
 			}
+			System.out.println("輸出成功");
 			return true;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
