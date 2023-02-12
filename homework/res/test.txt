@@ -1,0 +1,14 @@
+Tom,M,2022-09-12,0912345678,a123@gmail.com,Sales,35000,5000
+Peter,M,2022-09-12,0912345678,a123@gmail.com,Manager,45000,6000
+Ras,M,2022-09-12,0912345678,a123@gmail.com,GeneralEmployee,32000
+
+
+Camper,M,2022-09-12,0912345678,a123@gmail.com,TemporaryEmployees,190,120
+Tom,M,2022-09-12,0912345678,a123@gmail.com,Sales,35000,5000
+Peter,M,2022-09-12,0912345678,a123@gmail.com,Manager,45000,6000
+Ras,M,2022-09-12,0912345678,a123@gmail.com,GeneralEmployee,32000
+Camper,M,2022-09-12,0912345678,a123@gmail.com,TemporaryEmployees,190,120
+Tom,M,2022-09-12,0912345678,a123@gmail.com,Sales,35000,5000
+Peter,M,2022-09-12,0912345678,a123@gmail.com,Manager,45000,6000
+Ras,M,2022-09-12,0912345678,a123@gmail.com,GeneralEmployee,32000
+Camper,M,2022-09-12,0912345678,a123@gmail.com,TemporaryEmployees,190,120
